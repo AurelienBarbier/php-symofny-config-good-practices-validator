@@ -1,4 +1,4 @@
-# PHP Good practices validators & checkers set
+# PHP Good practices validators & checkers set (for symfony projects)
 
 ## Tools lists
 
