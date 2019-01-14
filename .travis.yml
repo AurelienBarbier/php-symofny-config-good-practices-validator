@@ -1,0 +1,22 @@
+language: php
+php:
+    - '7.2'
+before_install:
+    - if [ -d "./vendor" ]; then echo "Forbidden vendor folder found !"; exit 2; fi
+    - if [ -d "./node_modules" ]; then echo "Forbidden node modules folder found !"; exit 2; fi
+    - if [ -d "./.idea" ]; then echo "Forbidden idea folder found !"; exit 2; fi
+    - if [ -d "./.env.local" ]; then echo "Forbidden configuration file found !"; exit 2; fi
+install:
+    - composer require squizlabs/php_codesniffer
+    - composer require --dev phpstan/phpstan
+script:
+    - ./vendor/bin/phpcs
+    - ./vendor/bin/phpstan analyse -l 7 src
+notifications:
+    email:
+        - aurelien@wildcodeschool.fr
+        - wilder.php@gmail.com
+branches:
+    only:
+        - master
+        - dev

@@ -1,0 +1,17 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpro/grumphp": "^0.14.3",
+        "phpstan/phpstan": "^0.10.6",
+        "phpstan/phpstan-symfony": "^0.10.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
