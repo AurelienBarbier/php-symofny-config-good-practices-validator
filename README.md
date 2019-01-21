@@ -36,7 +36,8 @@ Is configured to block commit if :
   
  - PSR according to code_sniffer are not respected,
  - PHP Syntaxe is wrong according to PHPStan.
-     
+   
+ - HTML [validator](https://github.com/svenkreiss/html5validator#integration-with-travisci)
      
 ### PHP Code_sniffer
 
